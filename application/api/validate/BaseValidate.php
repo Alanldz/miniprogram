@@ -8,10 +8,10 @@
 
 namespace app\api\validate;
 
-use app\lib\exception\ParameterException;
 use think\Exception;
 use think\Request;
 use think\Validate;
+use app\lib\exception\ParameterException;
 
 class BaseValidate extends Validate
 {
@@ -30,6 +30,24 @@ class BaseValidate extends Validate
             throw $e;
         }else{
             return true;
+        }
+    }
+
+    /**
+     * 验证值是不是正整数
+     * @param $value
+     * @param string $rule
+     * @param array $data
+     * @param string $field
+     * @return bool
+     * @author ldz
+     * @time 2019-8-19 19:40:52
+     */
+    protected function isPositiveInteger($value, $rule = '',$data = [], $field = ''){
+        if(is_numeric($value) && is_int($value + 0) && ($value + 0 ) > 0){
+            return true;
+        }else{
+            return false;
         }
     }
 
