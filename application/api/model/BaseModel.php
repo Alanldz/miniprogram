@@ -14,10 +14,11 @@ class BaseModel extends Model
      * @author ldz
      * @time 2019-9-10 19:59:21
      */
-    protected function prefixImgUrl($value,$data){
+    protected function prefixImgUrl($value, $data)
+    {
         $finalUrl = $value;
-        if($data['from'] == 1){
-            $finalUrl = config('setting.img_prefix').$value;
+        if ($data['from'] == 1) {
+            $finalUrl = config('setting.img_prefix') . $value;
         }
         return $finalUrl;
     }

@@ -20,3 +20,6 @@ Route::get('api/:version/theme/:id','api/:version.Theme/getComplexOne');
 
 //Product控制器
 Route::get('api/:version/product/recent','api/:version.Product/getRecent');
+
+//Category控制器
+Route::get('api/:version/category/all','api/:version.Category/getAllCategories');
