@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45ff7549-6ded-4248-b714-7ef09bb98736" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Zerg/application/api/service/Token.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zerg/application/extra/secure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/v1/Banner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/v1/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/v1/Product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/v1/Theme.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/controller/v2/Banner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/Banner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/BannerItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/BaseModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/Image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/Product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/model/Theme.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/validate/BaseValidate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/validate/CountValidate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/validate/IDCollection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/api/validate/IDMustBePostLiveInt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/common.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/extra/setting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/lib/exception/BannerMissException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/lib/exception/BaseException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/lib/exception/ExceptionHandler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/lib/exception/ParameterException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/lib/exception/ProductException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/lib/exception/ThemeException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/route.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/tags.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/error_code" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1@theme-head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1@theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/2@theme-head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/2@theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/3@theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banner-1a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banner-2a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banner-3a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banner-4a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category-cake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category-fry-a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category-rice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category-tea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category-vg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-10@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-11@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-12@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-13@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-1@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-2@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-3@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-4@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-5@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-6@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-7@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-8@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/detail-9@1-dryfruit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-cake-a@3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-cake-a@4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-cake@1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-cake@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit-a@6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit@1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit@3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit@4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit@5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit@7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-dryfruit@8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-fry@1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-fry@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-fry@3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-fry@4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-fry@5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-rice@1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-rice@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-rice@3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-rice@4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-rice@5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-rice@6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-rice@7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-tea@1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-tea@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-tea@3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-vg@1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-vg@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-vg@3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-vg@4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product-vg@5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/think" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/.gitignore" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/Token.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/application/extra/secure.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/application/extra/wx.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/application/api/controller/v1/Token.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/UserToken.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+              <folding>
+                <element signature="e#114#150#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/thinkphp/library/think/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="1261" column="43" selection-start-line="1261" selection-start-column="38" selection-end-line="1261" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/application/common.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/thinkphp/library/think/Error.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zerg/log/201910/14.log">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>log</find>
+      <find>hidden</find>
+      <find>}</find>
+      <find>img_prefix</find>
+      <find>isPositiveInteger</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\working\study\miniprogram\application</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/application/extra/setting.php" />
+        <option value="$PROJECT_DIR$/application/api/controller/v2/Banner.php" />
+        <option value="$PROJECT_DIR$/application/api/validate/IDMustBePostLiveInt.php" />
+        <option value="$PROJECT_DIR$/application/lib/exception/ThemeException.php" />
+        <option value="$PROJECT_DIR$/application/config.php" />
+        <option value="$PROJECT_DIR$/application/api/model/Theme.php" />
+        <option value="$PROJECT_DIR$/application/api/model/Image.php" />
+        <option value="$PROJECT_DIR$/application/database.php" />
+        <option value="$PROJECT_DIR$/application/api/model/Banner.php" />
+        <option value="$PROJECT_DIR$/application/api/model/BannerItem.php" />
+        <option value="$PROJECT_DIR$/application/api/model/BaseModel.php" />
+        <option value="$PROJECT_DIR$/application/api/model/Category.php" />
+        <option value="$PROJECT_DIR$/application/api/validate/CategoryValidate.php" />
+        <option value="$PROJECT_DIR$/application/api/controller/v1/Category.php" />
+        <option value="$PROJECT_DIR$/error_code" />
+        <option value="$PROJECT_DIR$/application/api/controller/v1/Product.php" />
+        <option value="$PROJECT_DIR$/application/api/model/Product.php" />
+        <option value="$PROJECT_DIR$/application/lib/exception/CategoryException.php" />
+        <option value="$PROJECT_DIR$/application/api/validate/IDCollection.php" />
+        <option value="$PROJECT_DIR$/application/api/validate/CountValidate.php" />
+        <option value="$PROJECT_DIR$/application/lib/exception/BaseException.php" />
+        <option value="$PROJECT_DIR$/application/lib/exception/ProductException.php" />
+        <option value="$PROJECT_DIR$/application/api/controller/v1/Banner.php" />
+        <option value="$PROJECT_DIR$/application/api/controller/v1/Theme.php" />
+        <option value="$PROJECT_DIR$/application/route.php" />
+        <option value="$PROJECT_DIR$/application/api/validate/TokenGet.php" />
+        <option value="$PROJECT_DIR$/application/api/validate/BaseValidate.php" />
+        <option value="$PROJECT_DIR$/application/api/model/User.php" />
+        <option value="$PROJECT_DIR$/application/extra/wx.php" />
+        <option value="$PROJECT_DIR$/application/common.php" />
+        <option value="$PROJECT_DIR$/application/lib/exception/WeChatException.php" />
+        <option value="$PROJECT_DIR$/application/api/service/UserToken.php" />
+        <option value="$PROJECT_DIR$/application/api/controller/v1/Token.php" />
+        <option value="$PROJECT_DIR$/Zerg/application/api/model/User.php" />
+        <option value="$PROJECT_DIR$/Zerg/application/api/service/UserToken.php" />
+        <option value="$PROJECT_DIR$/Zerg/application/common.php" />
+        <option value="$PROJECT_DIR$/Zerg/application/extra/secure.php" />
+        <option value="$PROJECT_DIR$/Zerg/application/api/service/Token.php" />
+        <option value="$PROJECT_DIR$/Zerg/application/api/controller/v1/Token.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="local.api.com" id="f8ee1b46-6534-406e-b8ef-6ebba0884319" name="local.api.com" />
+      <server host="local.new_retail.com" id="329613ad-d636-4f32-9109-9953cfb99e92" name="local.new_retail.com" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/public" remote-root="D:/working/epiboly/new_retail" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="273" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="944" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="miniprogram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniprogram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniprogram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniprogram" type="462c0819:PsiDirectoryNode" />
+              <item name="Zerg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniprogram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniprogram" type="462c0819:PsiDirectoryNode" />
+              <item name="Zerg" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniprogram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniprogram" type="462c0819:PsiDirectoryNode" />
+              <item name="Zerg" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniprogram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniprogram" type="462c0819:PsiDirectoryNode" />
+              <item name="Zerg" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="extra" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\working\study\miniprogram\application\api\controller" />
+      <recent name="D:\working\study\miniprogram\public" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45ff7549-6ded-4248-b714-7ef09bb98736" name="Default Changelist" comment="" />
+      <created>1564661439212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564661439212</updated>
+      <workItem from="1564661440427" duration="2474000" />
+      <workItem from="1564708350161" duration="211000" />
+      <workItem from="1565171465502" duration="6102000" />
+      <workItem from="1565226319110" duration="614000" />
+      <workItem from="1565254325496" duration="7436000" />
+      <workItem from="1565312729596" duration="742000" />
+      <workItem from="1565331487692" duration="5496000" />
+      <workItem from="1565610735462" duration="2415000" />
+      <workItem from="1565658640283" duration="356000" />
+      <workItem from="1565697848834" duration="3429000" />
+      <workItem from="1565938766925" duration="310000" />
+      <workItem from="1566208533466" duration="3003000" />
+      <workItem from="1566262917434" duration="90000" />
+      <workItem from="1566385143141" duration="2630000" />
+      <workItem from="1566436085047" duration="738000" />
+      <workItem from="1567395838724" duration="321000" />
+      <workItem from="1568113016344" duration="6002000" />
+      <workItem from="1568164712535" duration="469000" />
+      <workItem from="1568200147442" duration="1901000" />
+      <workItem from="1568251145697" duration="740000" />
+      <workItem from="1570871473326" duration="5268000" />
+      <workItem from="1571015364499" duration="2039000" />
+      <workItem from="1571050263815" duration="7122000" />
+    </task>
+    <task id="LOCAL-00001" summary="1.commit-first">
+      <created>1564661593918</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564661593918</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.banner接口&#10;2.主题接口">
+      <created>1566436164740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566436164740</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.banner接口&#10;2.主题接口">
+      <created>1566436199000</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566436199000</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.banner接口&#10;2.主题接口">
+      <created>1566436219274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566436219282</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.商品接口">
+      <created>1568119280951</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568119280951</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.分类接口-未完成">
+      <created>1568202150792</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568202150792</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="59908000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2426869" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="12" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1.commit-first" />
+    <MESSAGE value="1.banner接口&#10;2.主题接口" />
+    <MESSAGE value="1.商品接口" />
+    <MESSAGE value="1.分类接口-未完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.分类接口-未完成" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Zerg/application/api/controller/v1/Token.php</url>
+          <line>19</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="setValue">
+      <expression>
+        <expression-string>&quot;JLf9EubH1KBqFHpj/LV7XQ==&quot;</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="1317" column="48" selection-start-line="1317" selection-start-column="43" selection-end-line="1317" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/model/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/validate/CategoryValidate.php" />
+    <entry file="file://$PROJECT_DIR$/application/lib/exception/ExceptionHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding>
+            <element signature="e#120#164#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/lib/exception/CategoryException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/validate/CountValidate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/lib/exception/ProductException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+          <folding>
+            <element signature="e#120#162#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v2/Banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-423">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#120#158#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <element signature="e#120#160#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/model/Banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/model/BannerItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/model/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/validate/IDCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/201908/09.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/201910/12.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1863" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/201908/08.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="84" lean-forward="true" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error_code">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/model/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/model/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/validate/TokenGet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/lib/exception/BaseException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/validate/BaseValidate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#115#135#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/validate/IDMustBePostLiveInt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/extra/setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/soft/study/tp5.0+ 小程序/y0zdij/Zerg/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/lib/exception/ThemeException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/lib/exception/WeChatException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/service/UserToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="e#114#152#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/extra/wx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/v1/Token.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#122#152#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/log/201910/14.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/thinkphp/library/think/Error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/extra/wx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/thinkphp/library/think/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="1261" column="43" selection-start-line="1261" selection-start-column="38" selection-end-line="1261" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/soft/study/tp5.0+ 小程序/y0zdij/Zerg/application/command.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/soft/study/tp5.0+ 小程序/y0zdij/Zerg/application/api/service/UserToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="147" column="22" lean-forward="true" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/soft/study/tp5.0+ 小程序/y0zdij/Zerg/application/api/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/extra/secure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/Token.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/api/controller/v1/Token.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/UserToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding>
+            <element signature="e#114#150#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
