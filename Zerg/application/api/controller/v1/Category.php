@@ -24,7 +24,7 @@ class Category
      * @time 2019/10/12 17:34
      */
     public function getAllCategories(){
-        $category = CategoryModel::all(['id'=>8],'img');
+        $category = CategoryModel::all([],'img');
         if($category->isEmpty()){
             throw new CategoryException();
         }

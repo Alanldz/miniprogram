@@ -8,7 +8,9 @@
 
 namespace app\api\service;
 
+use app\lib\enum\ScopeEnum;
 use app\api\model\User as UserModel;
+use app\lib\exception\TokenException;
 use app\lib\exception\WeChatException;
 use think\Exception;
 
@@ -46,7 +48,7 @@ class UserToken extends Token
             if (array_key_exists('errcode', $wxResult)) {
                 $this->processLoginError($result);
             } else {
-                $this->grandToken($wxResult);
+                return $this->grandToken($wxResult);
             }
         }
     }
@@ -54,8 +56,10 @@ class UserToken extends Token
     /**
      * 返回Token
      * @param $wxResult
+     * @return string
+     * @throws TokenException
      * @author ldz
-     * @time 2019/10/14 19:35
+     * @time 2019/10/15 19:31
      */
     private function grandToken($wxResult)
     {
@@ -73,17 +77,40 @@ class UserToken extends Token
         } else {
             $uid = $this->newUser($openID);
         }
-        $cachedValue = $this->prepareCachedValue($wxResult,$uid);
+        $cachedValue = $this->prepareCachedValue($wxResult, $uid);
+        $token = $this->saveToCache($cachedValue);
+        return $token;
     }
 
-    private function saveToCache(){
+    /**
+     * 保存带缓存中
+     * @param $cachedValue
+     * @return string
+     * @throws TokenException
+     * @author ldz
+     * @time 2019/10/16 8:52
+     */
+    private function saveToCache($cachedValue)
+    {
+        $key = self::generateToken();
+        $value = json_encode($cachedValue);
+        $expire_in = config('setting.token_expire_in');
 
+        $request = cache($key, $value, $expire_in);
+        if (!$request) {
+            throw new TokenException([
+                'msg' => '服务器缓存异常',
+                'errorCode' => 10005
+            ]);
+        }
+        return $key;
     }
 
-    private function prepareCachedValue($wxResult,$uid){
+    private function prepareCachedValue($wxResult, $uid)
+    {
         $cachedValue = $wxResult;
         $cachedValue['uid'] = $uid;
-        $cachedValue['scope'] = 16;
+        $cachedValue['scope'] = ScopeEnum::User;
         return $cachedValue;
     }
 

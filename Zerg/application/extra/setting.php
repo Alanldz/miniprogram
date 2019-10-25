@@ -7,7 +7,8 @@
  */
 return [
 
-    'img_prefix'=>'http://local.api.com/image'
+    'img_prefix'=>'http://local.api.com/image',//图片url
+    'token_expire_in' => 7200
 
 
 ];

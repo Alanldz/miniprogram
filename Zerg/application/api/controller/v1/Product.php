@@ -55,4 +55,35 @@ class Product
         return json($products);
     }
 
+    /**
+     * 获取商品信息
+     * @param $id
+     * @return \think\response\Json
+     * @throws ProductException
+     * @throws \think\Exception
+     * @author ldz
+     * @time 2019/10/17 20:23
+     */
+    public function getOne($id)
+    {
+        $dd = [
+           'products'=> [
+               'product_id' => 1,
+               'count' => 2
+           ],
+            [
+                'product_id' => 2,
+                'count' => 3
+            ],
+        ];
+
+        return json($dd);
+        (new IDMustBePostLiveInt())->goCheck();
+        $product = ProduceModel::getProductDetail($id);
+        if (!$product) {
+            throw new ProductException();
+        }
+        return json($product);
+    }
+
 }

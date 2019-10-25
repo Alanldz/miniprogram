@@ -15,12 +15,20 @@ use app\api\validate\TokenGet;
 class Token
 {
 
+    /**
+     * 获取Token
+     * @param string $code
+     * @return array
+     * @throws \think\Exception
+     * @author ldz
+     * @time 2019/10/15 19:32
+     */
     public function getToken($code = '')
     {
         (new TokenGet())->goCheck();
         $userToken = new UserToken($code);
         $token = $userToken->get();
-        return $token;
+        return json(['token' => $token]);
     }
 
 }

@@ -18,6 +18,22 @@ class Product extends BaseModel
         return $this->prefixImgUrl($value, $data);
     }
 
+    /**
+     * 关联商品详情
+     */
+    public function properties()
+    {
+        return $this->hasMany('ProductProperty', 'product_id', 'id');
+    }
+
+    /**
+     * 关联图片
+     */
+    public function imgs()
+    {
+        return $this->hasMany('ProductImage', 'product_id', 'id');
+    }
+
     public static function getMostRecent($count)
     {
         return self::limit($count)->order('create_time desc')->select();
@@ -29,6 +45,18 @@ class Product extends BaseModel
     public static function getProductByCategory($categoryID)
     {
         return self::where('category_id', '=', $categoryID)->select();
+    }
+
+    public static function getProductDetail($id)
+    {
+        return self::where('id', '=', $id)
+            ->with([
+                'imgs' => function ($query) {
+                    $query->order('order', 'asc')->with(['imgUrl']);
+                }
+            ])
+            ->with(['properties'])
+            ->select();
     }
 
 
