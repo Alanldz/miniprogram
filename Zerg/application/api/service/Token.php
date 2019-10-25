@@ -89,4 +89,17 @@ class Token
         $uid = self::getCurrentTokenVar('uid');
         return $uid;
     }
+
+    //检测是否是有效用户
+    public static function isValidOperate($checkedUID)
+    {
+        if (!$checkedUID) {
+            throw new Exception('检查UID时必须传入一个被检查的UID');
+        }
+        $currentOperateUID = self::getCurrentUid();
+        if ($currentOperateUID == $checkedUID) {
+            return true;
+        }
+        return false;
+    }
 }

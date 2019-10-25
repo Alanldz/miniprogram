@@ -15,6 +15,7 @@ use app\api\model\UserAddress;
 use app\lib\exception\OrderException;
 use app\lib\exception\UserException;
 use app\api\model\Order as OrderModel;
+use think\Db;
 use think\Exception;
 
 class Order
@@ -154,6 +155,7 @@ class Order
      */
     private function createOrder($snap)
     {
+        Db::startTrans();
         try {
             $order = new OrderModel();
             $order->order_no = $this->makeOrderNo();
@@ -172,20 +174,32 @@ class Order
             }
             $orderProduct = new OrderProduct();
             $orderProduct->saveAll($this->oProducts);
+
+            Db::commit();
             return [
                 'order_no' => $order->order_no,
                 'order_id' => $order->id,
                 'create_time' => $order->create_time,
             ];
         } catch (Exception $ex) {
+            Db::rollback();
             throw $ex;
         }
+    }
+
+    public function checkOrderStock($orderID)
+    {
+        $oProducts = OrderProduct::where('order_id', '=', $orderID)->select();
+        $this->oProducts = $oProducts;
+        $this->products = $this->getProductsByOrder($oProducts);
+        $status = $this->getOrderStatus();
+        return $status;
     }
 
     //生成订单编号
     public static function makeOrderNo()
     {
-        $yCode = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J','K','L','M','N','O','P','Q','R','S','T');
+        $yCode = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T');
         $orderSn =
             $yCode[intval(date('Y')) - 2019] . strtoupper(dechex(date('m'))) . date(
                 'd') . substr(time(), -5) . substr(microtime(), 2, 5) . sprintf(
