@@ -7,4 +7,5 @@
  */
 return [
     'token_salt' => 'HHGZLIEMJQVNSPewerw',
+    'pay_back_url' => 'http:**.com/api/v1/pay/notify'
 ];
